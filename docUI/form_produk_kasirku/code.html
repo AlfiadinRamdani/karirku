@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface-variant":"#4f4632","surface-container-highest":"#e1e3e4","on-surface":"#191c1d","inverse-surface":"#2e3132","surface-container-lowest":"#ffffff","on-error-container":"#93000a","surface-container":"#edeeef","surface-variant":"#e1e3e4","outline-variant":"#d3c5ac","on-background":"#191c1d","on-secondary-fixed-variant":"#3d4756","on-primary-fixed":"#251a00","surface-bright":"#f8f9fa","secondary-fixed-dim":"#bdc7d9","background":"#f8f9fa","primary-fixed":"#ffdf98","on-secondary":"#ffffff","outline":"#817660","inverse-on-surface":"#f0f1f2","tertiary-fixed":"#6ffbbe","secondary-fixed":"#d9e3f6","on-primary-fixed-variant":"#5a4300","on-tertiary":"#ffffff","error":"#ba1a1a","on-secondary-container":"#596373","on-tertiary-container":"#006444","on-tertiary-fixed-variant":"#005236","secondary-container":"#d6e0f3","surface-dim":"#d9dadb","surface":"#f8f9fa","tertiary":"#006c49","inverse-primary":"#f6be0a","on-error":"#ffffff","surface-tint":"#775a00","primary-fixed-dim":"#f6be0a","primary":"#775a00","primary-container":"#ffc61a","on-secondary-fixed":"#121c2a","on-primary":"#ffffff","secondary":"#555f6f","error-container":"#ffdad6","tertiary-fixed-dim":"#4edea3","tertiary-container":"#57e6aa","on-primary-container":"#6e5400","surface-container-low":"#f3f4f5","on-tertiary-fixed":"#002113","surface-container-high":"#e7e8e9"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1rem","space-xl":"2rem","space-lg":"1.5rem","space-md":"1rem","gutter-desktop":"1.5rem","space-sm":"0.5rem",margin:"1rem","space-xs":"0.25rem","margin-desktop":"2rem"},fontFamily:{"headline-md":["Space Grotesk"],"body-lg":["Inter"],"headline-lg":["Space Grotesk"],"display-currency-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-md":["Inter"],"headline-sm":["Space Grotesk"],"label-sm":["Inter"],"label-numeric":["Space Grotesk"],"body-sm":["Inter"],"label-md":["Inter"],"display-currency":["Space Grotesk"]},fontSize:{"headline-md":["24px",{lineHeight:"32px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"500"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"display-currency-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"26px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"600"}],"label-numeric":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",fontWeight:"600"}],"display-currency":["44px",{lineHeight:"52px",letterSpacing:"-0.03em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="px-gutter-desktop py-space-md flex items-center gap-space-sm bg-surface-container-low"><img alt="KasirKu Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjttJi0PY_YXb-V_BnoOHioRRZDNkd1iSmKAABmvdyAYz8IedmFXDyU66pZAgucNFHznrthubrUxb-gizvTEwMJ2l4QKZaWPg_nbxbFziSR3NdbCOKCf9N1gMDSyDeUz3HbEo-tCr-HWJP1YIqd1uzyyydZshCKMsIN7g-0j__hGDQcqM_Fk2zMBLc0J78mNmOG1YRoSIMh6FPrwGHOV8oHDaljyZ70R-vwFN8OrwD0_unmGp8owG4ew"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-none">KasirKu</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Warung Berkah Jaya</span></div></div><div class="px-gutter-desktop py-space-sm"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-tertiary">Online • Kas Buka</span></div><span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">Kasir Aktif</span></div></div><div class="px-gutter-desktop mt-space-sm mb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Menu Operasional</span></div><nav class="flex flex-col gap-space-xs px-gutter" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="transaksi-kasir" href="#"><span class="material-symbols-outlined text-xl">point_of_sale</span><span class="font-body-md text-body-md">Transaksi Kasir</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="daftar-produk" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span><span class="font-body-md text-body-md">Daftar Produk</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tambah-edit-produk" href="#"><span class="material-symbols-outlined text-xl">add_box</span><span class="font-body-md text-body-md">Tambah / Edit Produk</span></a></nav></div><div class="p-gutter-desktop bg-surface-container-low"><div class="flex items-center gap-space-sm mb-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9f20f2eW8LMNwy8zae0K-T_roX4ngAJE3spUhOJv6wm1goJsUSRcREGYzXaDD5sxFkJoR0ERIT6xTdkVpovd8XCEHqnM4TQuBJdo-l7yuplSSGiy0whpvfpfNCfRKJq8tV189bJ-RHSLZH-ABH6V_4P8tjZ1gQ0PDnA1A1RkPUeNlC3kuTLiSW_gJTCfYaCgA0XRXxILRRMrPAqtfSTOMgx6RaUUkiYrH0ZMIM6MBuAW9_aWaMpedg"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate">Bu Dewi (Kasir)</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Shift Pagi • POS 01</span></div></div><div class="grid grid-cols-2 gap-space-xs"><button class="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-sm">sync_alt</span><span>Ganti Shift</span></button><button class="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg bg-surface-container-lowest text-error hover:bg-error-container hover:text-on-error-container transition-colors font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-sm">logout</span><span>Keluar</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-base text-on-surface-variant">storefront</span><span class="font-label-md text-label-md text-on-surface">Warung Berkah Jaya</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-base">wifi</span><span class="font-body-sm text-body-sm">Terhubung</span></div><div class="h-4 w-px bg-outline-variant"></div><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-base">receipt_long</span><span>Struk Terakhir</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9f20f2eW8LMNwy8zae0K-T_roX4ngAJE3spUhOJv6wm1goJsUSRcREGYzXaDD5sxFkJoR0ERIT6xTdkVpovd8XCEHqnM4TQuBJdo-l7yuplSSGiy0whpvfpfNCfRKJq8tV189bJ-RHSLZH-ABH6V_4P8tjZ1gQ0PDnA1A1RkPUeNlC3kuTLiSW_gJTCfYaCgA0XRXxILRRMrPAqtfSTOMgx6RaUUkiYrH0ZMIM6MBuAW9_aWaMpedg"/></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-gutter-desktop space-y-space-lg">
+<!-- Breadcrumb Bar -->
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-on-surface transition-colors" href="#">Beranda</a>
+<span class="material-symbols-outlined text-sm text-outline-variant">chevron_right</span>
+<a class="hover:text-on-surface transition-colors" href="#">Produk</a>
+<span class="material-symbols-outlined text-sm text-outline-variant">chevron_right</span>
+<span class="text-on-surface font-headline-sm text-headline-sm">Tambah Produk Baru</span>
+</nav>
+<!-- Header Section with Quick Stats Pill -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-primary-container text-on-primary-container material-symbols-outlined text-xl">inventory_2</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Form Tambah Produk Baru</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Lengkapi detail produk dagangan warung dengan teliti untuk mempercepat proses kasir &amp; akurasi laba.</p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-surface-container-low">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">SKU Otomatis Aktif</span>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-base">savings</span>
+<span class="font-label-md text-label-md">Perhitungan Margin Otomatis</span>
+</div>
+</div>
+</div>
+<!-- Main Workspace: Asymmetric 2-Column Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Comprehensive Form Cards (8 cols) -->
+<form class="lg:col-span-8 space-y-space-lg" id="productForm" onsubmit="event.preventDefault();">
+<!-- Bagian 1: Informasi Utama -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">01</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Informasi Utama</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">* Wajib diisi</span>
+</div>
+<div class="space-y-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="productName">Nama Produk Dagangan</label>
+<div class="relative">
+<input class="w-full h-12 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="productName" placeholder="Contoh: Beras Pandan Wangi 5kg, Indomie Goreng Spesial" required="" type="text" value="Beras Pandan Wangi 5kg"/>
+<span class="absolute right-3.5 top-3 text-outline material-symbols-outlined text-lg">local_mall</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="productCategory">Kategori Produk</label>
+<div class="relative">
+<select class="w-full h-12 px-space-md pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all cursor-pointer" id="productCategory">
+<option selected="" value="Sembako">Sembako &amp; Beras</option>
+<option value="Minuman">Minuman &amp; Kopi</option>
+<option value="Bumbu Dapur">Bumbu &amp; Minyak Dapur</option>
+<option value="Makanan Ringan">Makanan Ringan / Snack</option>
+<option value="Peralatan Rumah">Peralatan Rumah &amp; Mandi</option>
+<option value="Rokok &amp; Pulsa">Rokok &amp; Produk Kasir</option>
+</select>
+<span class="pointer-events-none absolute right-3.5 top-3.5 text-on-surface-variant material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="productSKU">Kode Barcode / SKU</label>
+<div class="flex gap-space-xs">
+<div class="relative flex-1 min-w-0">
+<input class="w-full h-12 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all font-mono" id="productSKU" placeholder="Scan atau ketik kode..." type="text" value="8992388102031"/>
+</div>
+<button class="h-12 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-variant active:scale-95 text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all shadow-sm flex-shrink-0" id="btnScan" title="Gunakan kamera / scanner barcode" type="button">
+<span class="material-symbols-outlined text-base">barcode_scanner</span>
+<span>Scan Barcode</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bagian 2: Harga & Analisa Keuntungan -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">02</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Harga Modal &amp; Jual</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kalkulasi Margin Real-time</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="buyPrice">Harga Beli (Modal Warung)</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 font-headline-sm text-label-md text-on-surface-variant font-bold">Rp</span>
+<input class="w-full h-12 pl-12 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-label-numeric text-label-numeric focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="buyPrice" required="" step="500" type="number" value="58000"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Harga pokok saat kulakan per satuan</span>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="sellPrice">Harga Jual (Kasir)</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 font-headline-sm text-label-md text-on-surface font-bold">Rp</span>
+<input class="w-full h-12 pl-12 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-label-numeric text-label-numeric focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="sellPrice" required="" step="500" type="number" value="68000"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Harga yang dibayar pembeli</span>
+</div>
+</div>
+<!-- Highlight Banner Keuntungan / Margin -->
+<div class="p-space-md rounded-xl bg-tertiary-container/30 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm transition-all" id="marginBanner">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-lg">trending_up</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider block">Estimasi Keuntungan Bersih</span>
+<span class="font-headline-sm text-headline-sm text-tertiary" id="profitNominal">Rp 10.000 / Sak</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-start sm:self-center bg-surface-container-lowest px-space-md py-1.5 rounded-lg shadow-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Margin Laba:</span>
+<span class="font-headline-sm text-label-numeric text-tertiary font-bold" id="profitPercentage">17.2%</span>
+</div>
+</div>
+</section>
+<!-- Bagian 3: Pengelolaan Stok & Satuan -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">03</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pengelolaan Stok &amp; Satuan</h2>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Monitoring Real-time</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="initialStock">Jumlah Stok Awal</label>
+<div class="relative">
+<input class="w-full h-12 px-space-md rounded-xl bg-surface-container-low text-on-surface font-label-numeric text-label-numeric focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="initialStock" min="0" required="" type="number" value="25"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Tersedia di etalase / gudang</span>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="unitType">Satuan Barang</label>
+<div class="relative">
+<select class="w-full h-12 px-space-md pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all cursor-pointer" id="unitType">
+<option selected="" value="Sak/Karung">Sak / Karung (5kg)</option>
+<option value="Pcs">Pcs (Satuan)</option>
+<option value="Bungkus">Bungkus</option>
+<option value="Botol">Botol</option>
+<option value="Renteng">Renteng</option>
+<option value="Dus">Dus / Karton</option>
+<option value="Kg">Kilogram (Kg)</option>
+</select>
+<span class="pointer-events-none absolute right-3.5 top-3.5 text-on-surface-variant material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="minAlertStock">Batas Minimal Peringatan</label>
+<div class="relative">
+<input class="w-full h-12 px-space-md rounded-xl bg-surface-container-low text-on-surface font-label-numeric text-label-numeric focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="minAlertStock" min="1" required="" type="number" value="5"/>
+</div>
+<span class="font-body-sm text-body-sm text-error mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">notifications_active</span>
+                Notifikasi jika ≤ batas ini
+              </span>
+</div>
+</div>
+</section>
+<!-- Bagian 4: Catatan & Lokasi Rak (Opsional) -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs pb-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">04</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Catatan Tambahan <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">(Opsional)</span></h2>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="productNotes">Keterangan / Lokasi Rak Simpan</label>
+<textarea class="w-full p-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="productNotes" placeholder="Contoh: Rak Beras Utama No. 3, titipan Supplier Berkah Beras, masa kadaluarsa 6 bulan lagi." rows="3"></textarea>
+</div>
+</section>
+<!-- Form Action Footer Bar -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs pb-space-xl">
+<button class="px-space-lg py-3 rounded-xl bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all active:scale-95 text-center" type="button">
+            Batal
+          </button>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<button class="px-space-md py-3 rounded-xl bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all active:scale-95 text-center flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span>Simpan &amp; Tambah Lainnya</span>
+</button>
+<!-- Primary Action Callout: High-contrast KasirKu Yellow -->
+<button class="h-[52px] px-space-xl rounded-xl bg-primary-container text-on-primary-container hover:brightness-105 active:scale-98 font-headline-sm text-label-numeric font-bold shadow-md transition-all flex items-center justify-center gap-2" id="btnSaveProduct" type="submit">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Simpan Produk</span>
+</button>
+</div>
+</div>
+</form>
+<!-- Right Column: Live Card Preview & Info Sidebar (4 cols) -->
+<aside class="lg:col-span-4 space-y-space-md lg:sticky lg:top-20">
+<!-- Live POS Tile Preview Box -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-lg">preview</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Preview Kasir</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-semibold">Live POS View</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inilah representasi kartu item saat kasir Bu Dewi memilih menu di layar transaksi kasir utama:</p>
+<!-- Simulated POS Product Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-lowest transition-all shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm" id="previewCategory">
+                Sembako &amp; Beras
+              </span>
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold" id="previewStockBadge">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span id="previewStockQty">Stok 25</span>
+</span>
+</div>
+<!-- Product Picture Simulation -->
+<div class="relative w-full h-32 rounded-lg overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Clean minimal studio photograph of high quality Indonesian white pandan wangi rice inside burlap sack and rustic wooden scoop, warm sunlight, commercial food packaging photography style, highly detailed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT83gkP9s9YP-SmxOOsfPNA6-CBBvMrN8rvpGF6qwBxeQuODl2nwQKvrDqr86-cJKt4Ujp1vOiIPf0mZx3yfTPIVuwy3_URo_bv8M2UIzrcvxZ1Zh8WfsrsD-fuHdVCRaz606uLkKoD9hZGZeEvR01m2R-Estghjueo1z0o_Satjv2gAQyMDiMJLn3fp2dBLNiMQMNsiSOVfG-cyKvppfmp-daNDyRWPsrtjV06K8AEaZtlSQr26vvag"/>
+<div class="absolute bottom-2 left-2 bg-on-surface/80 backdrop-blur-md px-2 py-0.5 rounded text-surface-container-lowest font-mono text-[10px]" id="previewSKUTag">
+                8992388102031
+              </div>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg text-on-surface font-bold line-clamp-1" id="previewTitle">
+                Beras Pandan Wangi 5kg
+              </h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="previewUnitTag">
+                Kemasan: Sak/Karung
+              </span>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block leading-tight">Harga Jual</span>
+<span class="font-headline-sm text-label-numeric text-on-surface font-bold" id="previewPrice">
+                  Rp 68.000
+                </span>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm" type="button">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Quick Tip for Shopkeepers -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">lightbulb</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong>Tips Warung:</strong> Pastikan harga jual kasir sudah memperhitungkan plastik keresek atau biaya angkut agar keuntungan kas selalu sehat.
+            </span>
+</div>
+</div>
+<!-- Secondary Utility Card: Scanner Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">bluetooth_searching</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block leading-tight">Scanner Barcode USB/BT</span>
+<span class="font-body-sm text-body-sm text-tertiary font-medium">Siap Terima Input</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">Port 01</span>
+</div>
+</aside>
+</div>
+</div>
+<!-- Toast Notification Template (Hidden by default, triggered on Save) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded-xl shadow-xl flex items-center gap-space-md" id="saveToast">
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">check_circle</span>
+<div>
+<h5 class="font-headline-sm text-label-numeric text-inverse-on-surface">Produk Berhasil Disimpan!</h5>
+<p class="font-body-sm text-body-sm text-surface-variant">Beras Pandan Wangi 5kg kini aktif di katalog kasir.</p>
+</div>
+</div>
+<!-- Micro-interaction Script for Realtime Preview and Dynamic Margin Calculation -->
+<script>
+    (function initProductForm() {
+      const nameInput = document.getElementById('productName');
+      const categorySelect = document.getElementById('productCategory');
+      const skuInput = document.getElementById('productSKU');
+      const buyPriceInput = document.getElementById('buyPrice');
+      const sellPriceInput = document.getElementById('sellPrice');
+      const stockInput = document.getElementById('initialStock');
+      const unitSelect = document.getElementById('unitType');
+      const minStockInput = document.getElementById('minAlertStock');
+
+      // Live Preview Elements
+      const previewTitle = document.getElementById('previewTitle');
+      const previewCategory = document.getElementById('previewCategory');
+      const previewPrice = document.getElementById('previewPrice');
+      const previewStockQty = document.getElementById('previewStockQty');
+      const previewStockBadge = document.getElementById('previewStockBadge');
+      const previewUnitTag = document.getElementById('previewUnitTag');
+      const previewSKUTag = document.getElementById('previewSKUTag');
+
+      // Margin Calculation Elements
+      const profitNominal = document.getElementById('profitNominal');
+      const profitPercentage = document.getElementById('profitPercentage');
+      const marginBanner = document.getElementById('marginBanner');
+
+      function formatRupiah(number) {
+        return new Intl.NumberFormat('id-ID', {
+          style: 'currency',
+          currency: 'IDR',
+          maximumFractionDigits: 0
+        }).format(number);
+      }
+
+      function updateCalculations() {
+        const buy = parseFloat(buyPriceInput.value) || 0;
+        const sell = parseFloat(sellPriceInput.value) || 0;
+        const profit = sell - buy;
+        const percentage = buy > 0 ? ((profit / buy) * 100).toFixed(1) : 0;
+
+        profitNominal.textContent = `${formatRupiah(profit)} / ${unitSelect.value.split('/')[0]}`;
+        profitPercentage.textContent = `${percentage}%`;
+
+        // Update styling if margin is negative or healthy
+        if (profit < 0) {
+          marginBanner.className = 'p-space-md rounded-xl bg-error-container/40 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm transition-all';
+          profitNominal.className = 'font-headline-sm text-headline-sm text-error';
+          profitPercentage.className = 'font-headline-sm text-label-numeric text-error font-bold';
+        } else {
+          marginBanner.className = 'p-space-md rounded-xl bg-tertiary-container/30 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm transition-all';
+          profitNominal.className = 'font-headline-sm text-headline-sm text-tertiary';
+          profitPercentage.className = 'font-headline-sm text-label-numeric text-tertiary font-bold';
+        }
+
+        // Update Live Preview Price
+        previewPrice.textContent = formatRupiah(sell);
+      }
+
+      function updatePreview() {
+        previewTitle.textContent = nameInput.value.trim() || 'Nama Produk...';
+        previewCategory.textContent = categorySelect.value;
+        previewUnitTag.textContent = `Kemasan: ${unitSelect.value}`;
+        previewSKUTag.textContent = skuInput.value.trim() || 'NO-SKU';
+
+        const stock = parseInt(stockInput.value, 10) || 0;
+        const minAlert = parseInt(minStockInput.value, 10) || 0;
+        
+        previewStockQty.textContent = `Stok ${stock}`;
+
+        if (stock <= 0) {
+          previewStockBadge.className = 'flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold';
+          previewStockQty.textContent = 'Habis';
+        } else if (stock <= minAlert) {
+          previewStockBadge.className = 'flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold';
+        } else {
+          previewStockBadge.className = 'flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold';
+        }
+      }
+
+      // Event Listeners
+      nameInput.addEventListener('input', updatePreview);
+      categorySelect.addEventListener('change', updatePreview);
+      skuInput.addEventListener('input', updatePreview);
+      unitSelect.addEventListener('change', () => { updatePreview(); updateCalculations(); });
+      stockInput.addEventListener('input', updatePreview);
+      minStockInput.addEventListener('input', updatePreview);
+
+      buyPriceInput.addEventListener('input', updateCalculations);
+      sellPriceInput.addEventListener('input', updateCalculations);
+
+      // Barcode Scanner button simulation
+      const btnScan = document.getElementById('btnScan');
+      if (btnScan) {
+        btnScan.addEventListener('click', () => {
+          const simulatedCodes = ['8991001101014', '8992388102031', '8993175538059', '8998866200234'];
+          const randomCode = simulatedCodes[Math.floor(Math.random() * simulatedCodes.length)];
+          skuInput.value = randomCode;
+          updatePreview();
+        });
+      }
+
+      // Save submission toast feedback
+      const productForm = document.getElementById('productForm');
+      const toast = document.getElementById('saveToast');
+      if (productForm && toast) {
+        productForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+          }, 3500);
+        });
+      }
+
+      // Initial run
+      updateCalculations();
+      updatePreview();
+    })();
+  </script>
+</div></main></div></body></html>
