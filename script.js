@@ -10,19 +10,21 @@ const daftarProduk=[
     id:1,
     nama: "laptop asus",
     harga: 6000000,
+    stok:20
     
 },
 {
     id:2,
     nama: "keybord",
     harga: 250000,
+    stok:15
    
 },
 {
     id:3,
     nama: "mouse",
     harga: 30000,
-    
+    stok:25
     
 }
 ];
