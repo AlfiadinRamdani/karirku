@@ -1,28 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <form id="from-todo">
-        <label for="">tugas</label>
-        <input type="text" id="task"/><br>
-        <label for="">Kategori</label>
-        <input type="text" id="Kategori"/><br>
-        <button type="submit" id="Tambah">Simpan</button>
+      <label for="">tugas</label>
+      <input type="text" id="task" /><br />
+      <label for="">Kategori</label>
+      <input type="text" id="Kategori" /><br />
+      <button type="submit" id="Tambah">Simpan</button>
     </form>
     <table border="1">
-        <thead>
-            <tr>
-                <th>no</th>
-                <th>Tasks</th>
-                <th>Categories</th>
-                <th>action</th>
-            </tr>
-        </thead>
-        <tbody id="table-tugas"></tbody>
+      <thead>
+        <tr>
+          <th>no</th>
+          <th>Tasks</th>
+          <th>Categories</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody id="table-tugas"></tbody>
     </table>
-</body>
+    <script>
+      const fromTodo = document.querySelector("#form-todo");
+      const task = document.querySelector("#task");
+      const Kategori = document.querySelector("#kategori");
+      const tableTugas = document.querySelector("#tableTugas");
+      let nomor = 1;
+
+      fromTodo.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const tugasText = task.value.trim();
+        const tugasKategori = Kategori.value.trim();
+        // alert("muncull", tugasText, tugasKategori);
+        let tr = document.createElement("tr");
+        const noUrut = document.createElement("td");
+        noUrut.textContent = nomor++;
+        tr.appendChild(noUrut);
+        tableTugas.appendChild(tr);
+        const tugasShow = document.createElement("td");
+        tugasShow.textContent = tugasText;
+        tr.appendChild(tugasShow);
+        const kategoriShow = document.createElement("td");
+        kategoriShow.textContent = tugasKategori;
+        tr.appendChild(kategoriShow);
+        const btnShow = document.createElement("td");
+        const btnDelete = document.createElement("button");
+        btnDelete.textContent = "hapus";
+        btnDelete.className = "btn-remove";
+        btnShow.appendChild(btnDelete);
+        tr.appendChild(btnShow);
+        tableTugas.appendChild(tr);
+
+        fromTodo.reset();
+
+        // tableTugas.innerHTML +=`
+        // <tr>
+        //     <td>${nomor++}</td>
+        //     <td>${tugasText}</td>
+        //     <td>${tugasKategori}</td>
+        //     <td><button class="btn-remove">hapus</button></td>
+
+        //     </tr>`;
+      });
+      tableTugas.addEventListener("click", function (e) {
+        if (e.target.classList.contains("btn-remove")) {
+          const row = e.target.closest("tr");
+          row.remove();
+        }
+      });
+    </script>
+  </body>
 </html>
