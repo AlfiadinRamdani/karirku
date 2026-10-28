@@ -1,0 +1,23 @@
+{
+  "name": "kasirku",
+  "version": "1.0.0",
+  "description": "LINK GITHUB PAGE :https://alfiadinramdani.github.io/karirku/",
+  "main": "src/script.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev" : "node --watch src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfiadinRamdani/karirku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AlfiadinRamdani/karirku/issues"
+  },
+  "homepage": "https://github.com/AlfiadinRamdani/karirku#readme"
+}
