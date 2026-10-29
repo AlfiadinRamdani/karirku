@@ -1,82 +1,254 @@
-console.log("tesss");
-console.log("pusing");
-const namaProduk = "minyak Goreng sania 2liter";
-const hargaSatuan = 18500;
-const jumlahBeli = 2;
+// import{menjalankaNode}from"./menjalankan_node.js";
 
-console.log(
-  `nama produk adalah :${namaProduk}Total adalah : ${(hargaSatuan * jumlahBeli).toLocaleString("id-ID")}`,
-);
+// console.log(menjalankaNode());
+import * as readline from "node:readline/promises";
+import { stdin as input, stdout as output } from "node:process";
 
-const produkWarung = {
-  id: 1,
-  nama: "pecel lele",
-  kategori: "makanan",
-  hargaBeli: 9000,
-  hargaJual: 14000,
-  stok: 15,
-  batasMin: 5,
-};
-console.log(`ID PRODUK : SKU -${produkWarung.id}
-    nama Produk : ${produkWarung.nama}
-    Katagori : ${produkWarung.kategori}
-    harga Beli : ${produkWarung.hargaBeli.toLocaleString("id-ID")}
-    harga Jual : ${produkWarung.hargaJual.toLocaleString("id-ID")}
-    stock : ${produkWarung.stok}`);
-console.log(`
-        status: ${produkWarung.stok < produkWarung.batasMin ? "restok" : "tersedia"}
-        `);
-        //----------looping
-// const daftarProduk = [
-//   {
-//     nama: "telor",
-//     harga: 25000,
-//     stock: 15,
-//   },
-//   { nama: "Telor", harga: 25000, stok: 15 },
-//   { nama: "minyak", harga: 39000, stok: 45 },
-//   { nama: "beras", harga: 14500, stok: 25 },
-// ];
-// for (const produk of daftarProduk) {
-//   console.log(`nama Produk ${produk.nama},
-//         harga: ${produk.harga}
-//        sotk : ${produk.stok} `);
-// }
-// console.log(daftarProduk[2]);
 
-//---------------function---------------
-function hargaMargin (hargaJual,hargaBeli){
-    return hargaJual-hargaBeli;
-}
-function formatRupiah(angka){
-    return `Rp.${angka.toLocaleString("id-ID")}`;
-}
-const produk ={
-    nama: "nasi uduk",
-    hargaJual:25000,
-    hargaBeli: 10000,
-}
-console.log(hargaMargin(15000,5000));
-console.log(formatRupiah(produk.hargaJual));
-console.log(formatRupiah(produk.hargaBeli));
 
- console.log('LAPORAN HARIAN POS : TOKO Berkah Warung (kasirku)');
- console.log('Kasir Bertugas : Mak sri');
+const rl = readline.createInterface({input,output});
 
- const daftarProduk = [
- 
-  { nama: "minyak Goreng Sania 2L", hargaJual: 25000,hargaBeli:5000, stok: 15,batasMin:15 },
-  { nama: "gula", hargaJual: 39000, hargaBeli: 30000, stok: 45 ,batasMin:20},
-  { nama: "beras Ramos 5kg", hargaJual: 14500,hargaBeli: 10000, stok: 25,batasMin:10, },
+const daftar = [
+  {
+    nama: "teh celup",
+    harga: 5000,
+  },
+  { nama: "Cola-cola", harga: 8000 },
 ];
-let totalAsetToko = 0;
-for (const produk of daftarProduk) {
-totalAsetToko += produk.hargaJual * produk.stok ;
 
-  console.log(`nama Produk ${produk.nama} margin : ${hargaMargin(produk.hargaJual,produk.hargaBeli)}
-        harga: ${produk.hargaJual}
-       sotk : ${produk.stok} status: ${produk.stok <= produk.batasMin ? "restok" : "tersedia"} `);
-}
-console.log(`total estimasi aset toko:${totalAsetToko}`);
-console.log(`barang butuh perhatian : ${daftarProduk.filter((produk) => produk.stok < 20).length}`)        
-        
+console.table(daftar);
+let pilih;
+do {
+  pilih = await rl.question("pilih menu");
+  switch (pilih) {
+    case "1":
+      const nama = await rl.question("nama Produk :");
+      if (nama === ""){
+        console.log (`isi dulu nama produk!`);
+        break;
+      }
+      let harga = 0;
+      while (true) {let harga=number(await rl.question("harga produk :"));
+        if (harga===0||harga > 0){
+          console.log(`isi dulu harga atau harga tidak boleh minus`);
+          break;
+
+        }
+        console.log(`harga gagal terimput`)
+      }
+      daftar.push ({nama,harga});
+      console.log (`berhasil bertambah!`);
+      break;
+      case "2":
+        console.table(daftar);
+      break;
+case "3":
+  const cari = await rl.question("ketik yang dicari :");
+  let ketemu =0;
+  
+  break;
+  case "4":
+    console.log(`dah lah...`);
+    break;
+
+    default:
+      break;
+  }
+} while (pilih!=="4");
+
+
+// import readline from "node:readline";
+
+// // Membuat interface input terminal
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
+
+// // Fungsi untuk bertanya kepada pengguna
+// function tanya(pertanyaan) {
+//   return new Promise((resolve) => {
+//     rl.question(pertanyaan, (jawaban) => {
+//       resolve(jawaban.trim());
+//     });
+//   });
+// }
+
+// // Data contoh domain KasirKu (barang toko)
+// const dataBarang = [
+//   { nama: "Laptop", kategori: "Elektronik", stok: 5, harga: 7500000 },
+//   { nama: "Mouse", kategori: "Aksesoris", stok: 12, harga: 150000 },
+//   { nama: "Keyboard", kategori: "Aksesoris", stok: 8, harga: 250000 },
+// ];
+
+// // Format angka menjadi Rupiah
+// function formatRupiah(angka) {
+//   return new Intl.NumberFormat("id-ID", {
+//     style: "currency",
+//     currency: "IDR",
+//     maximumFractionDigits: 0,
+//   }).format(angka);
+// }
+
+// // Validasi angka bulat sampai benar
+// async function inputAngka(pertanyaan, minimum = 0) {
+//   while (true) {
+//     const input = await tanya(pertanyaan);
+//     const angka = Number(input);
+
+//     if (
+//       input !== "" &&
+//       Number.isFinite(angka) &&
+//       Number.isInteger(angka) &&
+//       angka >= minimum
+//     ) {
+//       return angka;
+//     }
+
+//     console.log(
+//       `Input tidak valid! Masukkan angka bulat minimal ${minimum}.`
+//     );
+//   }
+// }
+
+// // 1. MENU TAMBAH BARANG
+// async function tambahBarang() {
+//   console.log("\n===== TAMBAH BARANG =====");
+
+//   const nama = await tanya("Masukkan nama barang: ");
+
+//   if (nama === "") {
+//     console.log("Nama barang tidak boleh kosong!");
+//     return;
+//   }
+
+//   const kategori = await tanya("Masukkan kategori barang: ");
+
+//   if (kategori === "") {
+//     console.log("Kategori barang tidak boleh kosong!");
+//     return;
+//   }
+
+//   const stok = await inputAngka("Masukkan jumlah stok: ", 0);
+//   const harga = await inputAngka("Masukkan harga barang (Rp): ", 0);
+
+//   dataBarang.push({
+//     nama,
+//     kategori,
+//     stok,
+//     harga,
+//   });
+
+//   console.log("\nBarang berhasil ditambahkan!");
+//   console.log(`Nama     : ${nama}`);
+//   console.log(`Kategori : ${kategori}`);
+//   console.log(`Stok     : ${stok}`);
+//   console.log(`Harga    : ${formatRupiah(harga)}`);
+// }
+
+// // 2. MENU LIHAT BARANG
+// function lihatBarang() {
+//   console.log("\n===== DAFTAR BARANG =====");
+
+//   if (dataBarang.length === 0) {
+//     console.log("Belum ada data barang.");
+//     return;
+//   }
+
+//   const tabel = dataBarang.map((barang, index) => ({
+//     No: index + 1,
+//     Nama: barang.nama,
+//     Kategori: barang.kategori,
+//     Stok: barang.stok,
+//     Harga: formatRupiah(barang.harga),
+//   }));
+
+//   console.table(tabel);
+//   console.log(`Total jenis barang: ${dataBarang.length}`);
+// }
+
+// // 3. MENU CARI BARANG
+// async function cariBarang() {
+//   console.log("\n===== CARI BARANG =====");
+
+//   const kataKunci = (
+//     await tanya("Masukkan nama atau kategori barang: ")
+//   ).toLowerCase();
+
+//   if (kataKunci === "") {
+//     console.log("Kata pencarian tidak boleh kosong!");
+//     return;
+//   }
+
+//   const hasil = dataBarang.filter((barang) => {
+//     return (
+//       barang.nama.toLowerCase().includes(kataKunci) ||
+//       barang.kategori.toLowerCase().includes(kataKunci)
+//     );
+//   });
+
+//   if (hasil.length === 0) {
+//     console.log("Barang tidak ditemukan.");
+//     return;
+//   }
+
+//   console.log(`Ditemukan ${hasil.length} barang:`);
+
+//   console.table(
+//     hasil.map((barang, index) => ({
+//       No: index + 1,
+//       Nama: barang.nama,
+//       Kategori: barang.kategori,
+//       Stok: barang.stok,
+//       Harga: formatRupiah(barang.harga),
+//     }))
+//   );
+// }
+
+// // 4. MENU UTAMA: DO-WHILE + SWITCH
+// async function main() {
+//   let pilihan;
+
+//   do {
+//     console.log("\n================================");
+//     console.log("       KASIRKU - MENU CLI");
+//     console.log("================================");
+//     console.log("1. Tambah Barang");
+//     console.log("2. Lihat Barang");
+//     console.log("3. Cari Barang");
+//     console.log("4. Keluar");
+//     console.log("================================");
+
+//     pilihan = await tanya("Pilih menu (1-4): ");
+
+//     switch (pilihan) {
+//       case "1":
+//         await tambahBarang();
+//         break;
+
+//       case "2":
+//         lihatBarang();
+//         break;
+
+//       case "3":
+//         await cariBarang();
+//         break;
+
+//       case "4":
+//         console.log("\nTerima kasih telah menggunakan KasirKu!");
+//         break;
+
+//       default:
+//         console.log("\nPilihan tidak valid. Masukkan angka 1-4.");
+//     }
+//   } while (pilihan !== "4");
+// }
+
+// // Menjalankan program dan menutup readline dengan aman
+// main()
+//   .catch((error) => {
+//     console.error("Terjadi kesalahan:", error);
+//   })
+//   .finally(() => {
+//     rl.close();
+//   });
