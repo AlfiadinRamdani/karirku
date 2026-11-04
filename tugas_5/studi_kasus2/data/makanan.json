@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nama": "Nasi Goreng",
+    "kategori": "Makanan",
+    "harga": 12000
+  },
+  {
+    "id": 2,
+    "nama": "Nasi Goreng",
+    "kategori": "Makanan",
+    "harga": 12000
+  },
+  {
+    "id": 3,
+    "nama": "Nasi Goreng",
+    "kategori": "Makanan",
+    "harga": 12000
+  }
+]
